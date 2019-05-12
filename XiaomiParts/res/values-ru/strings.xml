@@ -26,6 +26,8 @@
     <string name="glove_mode_summary">Повышает чувствительность к касаниям (может повлиять на расход батареи)</string>
 
     <string name="sound_title">Звук</string>
+    <string name="sound_control_title">Управління звуком</string>
+    <string name="sound_control_summary">Налаштування підсилення звуку навушників, динаміка та мікрофону</string>
     <string name="headphone_gain">Усиление наушников</string>
     <string name="speaker_gain">Усиление динамика</string>
     <string name="mic_gain">Усиление микрофона</string>

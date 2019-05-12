@@ -26,6 +26,8 @@
     <string name="glove_mode_summary">Підвищує чутливість до торкань (може вплинути на витрату батареї)</string>
 
     <string name="sound_title">Звук</string>
+    <string name="sound_control_title">Управління звуком</string>
+    <string name="sound_control_summary">Налаштування підсилення звуку навушників, динаміка та мікрофону</string>
     <string name="headphone_gain">Підсилення навушників</string>
     <string name="speaker_gain">Підсилення динаміка</string>
     <string name="mic_gain">Підсилення мікрофону</string>
