@@ -62,6 +62,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String KEY_CATEGORY_USB_FASTCHARGE = "usb_fastcharge";
 
+    public static final String KEY_HEADPHONE_GAIN = "headphone_gain";
+    public static final String KEY_SPEAKER_GAIN = "speaker_gain";
+    public static final String KEY_MICROPHONE_GAIN = "mic_gain";
+
     private VibratorStrengthPreference mVibratorStrength;
     private YellowTorchBrightnessPreference mYellowTorchBrightness;
     private WhiteTorchBrightnessPreference mWhiteTorchBrightness;
@@ -70,6 +74,9 @@ public class DeviceSettings extends PreferenceFragment implements
     private SwitchPreference mFastcharge;
     private PreferenceCategory mUsbFastcharge;
     private BatteryChargingLimiterPreference mBatteryChargingLimiter;
+    private HeadphoneGainPreference mHeadphoneGain;
+    private SpeakerGainPreference mSpeakerGain;
+    private MicGainPreference mMicGain;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -116,6 +123,21 @@ public class DeviceSettings extends PreferenceFragment implements
         if (mBatteryChargingLimiter != null) {
             mBatteryChargingLimiter.setEnabled(BatteryChargingLimiterPreference.isSupported());
         }
+
+        mHeadphoneGain = (HeadphoneGainPreference) findPreference(KEY_HEADPHONE_GAIN);
+        if (mHeadphoneGain != null) {
+            mHeadphoneGain.setEnabled(HeadphoneGainPreference.isSupported());
+        }
+
+        mSpeakerGain = (SpeakerGainPreference) findPreference(KEY_SPEAKER_GAIN);
+        if (mSpeakerGain != null) {
+            mSpeakerGain.setEnabled(SpeakerGainPreference.isSupported());
+        }
+
+        mMicGain = (MicGainPreference) findPreference(KEY_MICROPHONE_GAIN);
+        if (mMicGain != null) {
+            mMicGain.setEnabled(MicGainPreference.isSupported());
+ 
     }
 
     private void setFastcharge(boolean value) {

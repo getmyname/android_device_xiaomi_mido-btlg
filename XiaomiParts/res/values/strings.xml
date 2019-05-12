@@ -39,4 +39,9 @@
     <!-- Charging Limiter -->
     <string name="battery_charging_limiter_title">Battery</string>
     <string name="battery_charging_limiter_desc">Set limit to stop battery charging</string>
+
+    <string name="sound_title">Sound</string>
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="speaker_gain">Speaker gain</string>
+    <string name="mic_gain">Microphone gain</string>
 </resources>

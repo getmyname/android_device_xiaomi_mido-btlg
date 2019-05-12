@@ -56,6 +56,13 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
+on property:sys.boot_completed=1
+    # Sound control
+    chown system system /sys/kernel/sound_control/headphone_gain
+    chown system system /sys/kernel/sound_control/speaker_gain
+    chown system system /sys/kernel/sound_control/mic_gain
+    restorecon_recursive /sys/kernel/sound_control
+
 on post-fs-data
 #Create folder for mm-qcamera-daemon
 mkdir /data/vendor/qcam/ 0770 camera camera

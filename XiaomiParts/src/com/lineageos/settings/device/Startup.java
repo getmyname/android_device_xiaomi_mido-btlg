@@ -55,5 +55,8 @@ public class Startup extends BroadcastReceiver {
         boolean usbFastchargeStoredValue = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.USB_FASTCHARGE_KEY, false);
         Utils.writeValue(DeviceSettings.USB_FASTCHARGE_PATH, usbFastchargeStoredValue ? "1" : "0" );
         BatteryChargingLimiterPreference.restore(context);
+        HeadphoneGainPreference.restore(context);
+        SpeakerGainPreference.restore(context);
+        MicGainPreference.restore(context);
     }
 }
