@@ -31,6 +31,7 @@ import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.Preference.OnPreferenceClickListener;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.PreferenceManager;
@@ -78,6 +79,16 @@ public class DeviceSettings extends PreferenceFragment implements
         setPreferencesFromResource(R.xml.main, rootKey);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        PreferenceScreen mKcalPref = (PreferenceScreen) findPreference("kcal");
+        mKcalPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+             @Override
+             public boolean onPreferenceClick(Preference preference) {
+                 Intent intent = new Intent(getActivity().getApplicationContext(), DisplayCalibration.class);
+                 startActivity(intent);
+                 return true;
+             }
+        });
 
         PreferenceScreen mSoundControlPref = (PreferenceScreen) findPreference("sound_control");
         mSoundControlPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {

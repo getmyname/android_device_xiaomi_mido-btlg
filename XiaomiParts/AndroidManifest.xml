@@ -43,6 +43,15 @@
                            android:resource="@string/advanced_settings_summary"/>
         </activity-alias>
         <activity
+            android:name="com.lineageos.settings.device.DisplayCalibration"
+            android:exported="true"
+            android:label="@string/kcal_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.lineageos.settings.device.sound.SoundControlActivity"
             android:exported="false"
             android:label="@string/sound_control_title" >

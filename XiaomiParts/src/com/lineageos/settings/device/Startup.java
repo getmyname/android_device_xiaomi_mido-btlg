@@ -58,6 +58,7 @@ public class Startup extends BroadcastReceiver {
         DeviceSettings.restoreSpectrumProp(context);
         boolean usbFastchargeStoredValue = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.USB_FASTCHARGE_KEY, false);
         Utils.writeValue(DeviceSettings.USB_FASTCHARGE_PATH, usbFastchargeStoredValue ? "1" : "0" );
+        DisplayCalibration.restore(context);
         BatteryChargingLimiterPreference.restore(context);
         HeadphoneGainPreference.restore(context);
         SpeakerGainPreference.restore(context);

@@ -22,7 +22,6 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_mido		u:object_r:hal_fingerprint_mido_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_mido					u:object_r:hal_ir_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi                 u:object_r:hal_lineage_livedisplay_default_exec:s0
 
 # Input files
 /(vendor|system/vendor)/usr/idc(/.*)?		u:object_r:idc_file:s0
@@ -30,6 +29,9 @@
 
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?              u:object_r:sysfs_kcal:s0
 
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd                 u:object_r:hal_mlipay_default_exec:s0

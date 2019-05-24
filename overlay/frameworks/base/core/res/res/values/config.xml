@@ -580,7 +580,4 @@
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">true</bool>
 
-    <!-- Default values for LiveDisplay -->
-    <bool name="config_defaultColorEnhancement">false</bool>
-
 </resources>
