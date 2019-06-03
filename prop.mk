@@ -169,6 +169,10 @@ ro.sys.fw.dex2oat_thread_count=8 \
 ro.vendor.extension_library=libqti-perfd-client.so \
 ro.vendor.qti.sys.fw.bservice_enable=true
 
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.havoc.maintainer=Silesh.Nair
+
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.use_data_netmgrd=true \

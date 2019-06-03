@@ -21,18 +21,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common Havoc stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
 
-# Include Bootanimation configuration
-TARGET_BOOT_ANIMATION_RES := 1080
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 # Inherit from custom vendor
 $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
+# Official
+export export HAVOC_BUILD_TYPE=Unofficial
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := aosp_mido
+PRODUCT_NAME := havoc_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
