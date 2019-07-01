@@ -121,6 +121,10 @@ dalvik.vm.image-dex2oat-threads=4 \
 dalvik.vm.dex2oat-filter=everything \
 dalvik.vm.image-dex2oat-filter=everything
 
+# Enforce privapp-permissions whitelist
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.control_privapp_permissions=enforce
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
