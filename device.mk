@@ -145,8 +145,8 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi_mido
 
 #Dirac
-PRODUCT_PACKAGES += \
-     Dirac
+#PRODUCT_PACKAGES += \
+#     Dirac
 
 # Display
 PRODUCT_PACKAGES += \
@@ -403,8 +403,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # VR
-PRODUCT_PACKAGES += \
-    vr.msm8953
+# PRODUCT_PACKAGES += \
+#    vr.msm8953
 
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
