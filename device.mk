@@ -145,8 +145,8 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi_mido
 
 #Dirac
-PRODUCT_PACKAGES += \
-     Dirac
+#PRODUCT_PACKAGES += \
+#     Dirac
 
 # Display
 PRODUCT_PACKAGES += \
